@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="main">
+    <div class="resource-download-list">
+        <f:if condition="{resources}">
+            <f:then>
+                <ul class="resource-download-list__items">
+                    <f:for each="{resources}" as="resource">
+                        <li class="resource-download-list__item">
+                            <div class="resource-download-list__item-content">
+                                <f:if condition="{resource.file}">
+                                    <f:then>
+                                        <a class="resource-download-list__link"
+                                           href="{f:uri.image(image: resource.file)}"
+                                           download="{resource.file.originalFile.name}"
+                                           title="{resource.title}">
+                                            <span class="resource-download-list__title">{resource.title}</span>
+                                        </a>
+                                    </f:then>
+                                    <f:else>
+                                        <span class="resource-download-list__title">{resource.title}</span>
+                                    </f:else>
+                                </f:if>
+                                <f:if condition="{resource.description}">
+                                    <div class="resource-download-list__description">
+                                        <f:format.html>{resource.description}</f:format.html>
+                                    </div>
+                                </f:if>
+                                <f:if condition="{resource.membersOnly}">
+                                    <span class="resource-download-list__badge resource-download-list__badge--members-only">
+                                        <f:translate key="label.membersOnly" extensionName="resource" />
+                                    </span>
+                                </f:if>
+                            </div>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <p class="resource-download-list__empty">
+                    <f:translate key="label.noResources" extensionName="resource" />
+                </p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+</html>

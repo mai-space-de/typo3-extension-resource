@@ -1,0 +1,59 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="main">
+    <div class="resource-form-preview">
+        <f:if condition="{resources}">
+            <f:then>
+                <f:for each="{resources}" as="resource">
+                    <div class="resource-form-preview__item">
+                        <h3 class="resource-form-preview__title">{resource.title}</h3>
+                        <f:if condition="{resource.description}">
+                            <div class="resource-form-preview__description">
+                                <f:format.html>{resource.description}</f:format.html>
+                            </div>
+                        </f:if>
+                        <f:if condition="{resource.file}">
+                            <div class="resource-form-preview__preview">
+                                <f:if condition="{resource.file.originalFile.extension} == 'pdf'">
+                                    <f:then>
+                                        <object class="resource-form-preview__embed"
+                                                data="{f:uri.image(image: resource.file)}"
+                                                type="application/pdf"
+                                                width="100%"
+                                                height="600">
+                                            <a class="resource-form-preview__fallback-link"
+                                               href="{f:uri.image(image: resource.file)}"
+                                               download="{resource.file.originalFile.name}">
+                                                <f:translate key="label.downloadForm" extensionName="resource" />
+                                            </a>
+                                        </object>
+                                    </f:then>
+                                    <f:else>
+                                        <a class="resource-form-preview__link"
+                                           href="{f:uri.image(image: resource.file)}"
+                                           download="{resource.file.originalFile.name}"
+                                           title="{resource.title}">
+                                            <f:translate key="label.downloadForm" extensionName="resource" />
+                                        </a>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </f:if>
+                        <f:if condition="{resource.membersOnly}">
+                            <span class="resource-form-preview__badge resource-form-preview__badge--members-only">
+                                <f:translate key="label.membersOnly" extensionName="resource" />
+                            </span>
+                        </f:if>
+                    </div>
+                </f:for>
+            </f:then>
+            <f:else>
+                <p class="resource-form-preview__empty">
+                    <f:translate key="label.noResources" extensionName="resource" />
+                </p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+</html>

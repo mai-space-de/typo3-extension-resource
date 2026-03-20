@@ -1,0 +1,33 @@
+{
+  "name": "maispace/resource",
+  "type": "typo3-cms-extension",
+  "description": "Downloads, Vorlagen, Formulare & Info-Boxen mit Zugriffsschutz per FE-Gruppe.",
+  "homepage": "https://www.maispace.de",
+  "license": ["GPL-2.0-or-later"],
+  "keywords": ["TYPO3 CMS"],
+  "authors": [{
+    "name": "Joel Maximilian Mai",
+    "email": "joel@maispace.de",
+    "role": "Lead Developer"
+  }],
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.2",
+    "typo3/cms-core": "^12.4 || ^13",
+    "typo3/cms-extbase": "^12.4 || ^13",
+    "typo3/cms-fluid": "^12.4 || ^13"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maispace\\Resource\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "resource"
+    },
+    "branch-alias": {
+      "dev-main": "1.0.x-dev"
+    }
+  }
+}

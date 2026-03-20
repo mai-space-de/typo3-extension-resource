@@ -1,0 +1,20 @@
+plugin.tx_resource {
+    view {
+        templateRootPaths {
+            0 = EXT:resource/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = EXT:resource/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = EXT:resource/Resources/Private/Layouts/
+        }
+    }
+    persistence {
+        storagePid =
+    }
+    settings {
+        # Public access group value (0 = public, 1 = members only)
+        publicAccessGroup = 0
+    }
+}
