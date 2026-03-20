@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Maispace\Resource\Domain\Repository;
+namespace Maispace\MaiResource\Domain\Repository;
 
-use Maispace\Resource\Domain\Model\ResourceCategory;
+use Maispace\MaiResource\Domain\Model\ResourceCategory;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
@@ -26,7 +26,7 @@ class ResourceRepository extends Repository
     {
         $query = $this->createQuery();
         $query->matching(
-            $query->equals('accessGroup', \Maispace\Resource\Domain\Model\Resource::ACCESS_GROUP_PUBLIC)
+            $query->equals('accessGroup', \Maispace\MaiResource\Domain\Model\Resource::ACCESS_GROUP_PUBLIC)
         );
         return $query->execute();
     }
@@ -40,7 +40,7 @@ class ResourceRepository extends Repository
     {
         $query = $this->createQuery();
         $query->matching(
-            $query->equals('accessGroup', \Maispace\Resource\Domain\Model\Resource::ACCESS_GROUP_MEMBERS)
+            $query->equals('accessGroup', \Maispace\MaiResource\Domain\Model\Resource::ACCESS_GROUP_MEMBERS)
         );
         return $query->execute();
     }

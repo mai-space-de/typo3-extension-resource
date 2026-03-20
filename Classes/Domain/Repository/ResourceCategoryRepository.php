@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Maispace\Resource\Domain\Repository;
+namespace Maispace\MaiResource\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;

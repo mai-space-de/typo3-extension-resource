@@ -1,4 +1,4 @@
-plugin.tx_resource {
+plugin.tx_mairesource {
     view {
         templateRootPaths {
             0 = EXT:mai_resource/Resources/Private/Templates/

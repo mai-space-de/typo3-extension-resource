@@ -48,7 +48,7 @@ Additionally, the standard TYPO3 `fe_group` field is available for fine-grained 
 Override the default templates by setting the template root paths in TypoScript:
 
 ```typoscript
-plugin.tx_resource {
+plugin.tx_mairesource {
     view {
         templateRootPaths {
             10 = EXT:your_extension/Resources/Private/Templates/

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Maispace\Resource\Domain\Model;
+namespace Maispace\MaiResource\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
@@ -34,7 +34,7 @@ class Resource extends AbstractEntity
     protected ?FileReference $file = null;
 
     /**
-     * @var \Maispace\Resource\Domain\Model\ResourceCategory|null
+     * @var \Maispace\MaiResource\Domain\Model\ResourceCategory|null
      * @Lazy
      */
     protected ?ResourceCategory $category = null;

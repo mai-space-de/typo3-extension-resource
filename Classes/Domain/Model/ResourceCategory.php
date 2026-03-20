@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Maispace\Resource\Domain\Model;
+namespace Maispace\MaiResource\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 

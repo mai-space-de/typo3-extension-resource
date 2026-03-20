@@ -6,7 +6,7 @@ defined('TYPO3') or exit('Access denied.');
     'Maispace.Resource',
     'DownloadList',
     [
-        \Maispace\Resource\Controller\ResourceController::class => 'downloadList',
+        \Maispace\MaiResource\Controller\ResourceController::class => 'downloadList',
     ],
     [],
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
@@ -16,7 +16,7 @@ defined('TYPO3') or exit('Access denied.');
     'Maispace.Resource',
     'CategorizedList',
     [
-        \Maispace\Resource\Controller\ResourceController::class => 'categorizedList',
+        \Maispace\MaiResource\Controller\ResourceController::class => 'categorizedList',
     ],
     [],
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
@@ -26,7 +26,7 @@ defined('TYPO3') or exit('Access denied.');
     'Maispace.Resource',
     'InfoBoxWidget',
     [
-        \Maispace\Resource\Controller\ResourceController::class => 'infoBoxWidget',
+        \Maispace\MaiResource\Controller\ResourceController::class => 'infoBoxWidget',
     ],
     [],
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
@@ -36,7 +36,7 @@ defined('TYPO3') or exit('Access denied.');
     'Maispace.Resource',
     'FormPreview',
     [
-        \Maispace\Resource\Controller\ResourceController::class => 'formPreview',
+        \Maispace\MaiResource\Controller\ResourceController::class => 'formPreview',
     ],
     [],
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT

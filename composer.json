@@ -1,33 +1,39 @@
 {
-  "name": "maispace/resource",
+  "name": "maispace/mai-resource",
   "type": "typo3-cms-extension",
   "description": "Downloads, Vorlagen, Formulare & Info-Boxen mit Zugriffsschutz per FE-Gruppe.",
   "homepage": "https://www.maispace.de",
-  "license": ["GPL-2.0-or-later"],
-  "keywords": ["TYPO3 CMS"],
-  "authors": [{
-    "name": "Joel Maximilian Mai",
-    "email": "joel@maispace.de",
-    "role": "Lead Developer"
-  }],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "keywords": [
+    "TYPO3 CMS"
+  ],
+  "authors": [
+    {
+      "name": "Joel Maximilian Mai",
+      "email": "joel@maispace.de",
+      "role": "Lead Developer"
+    }
+  ],
   "version": "1.0.0",
   "require": {
     "php": "^8.2",
-    "typo3/cms-core": "^12.4 || ^13",
-    "typo3/cms-extbase": "^12.4 || ^13",
-    "typo3/cms-fluid": "^12.4 || ^13"
+    "typo3/cms-core": "^13.4",
+    "typo3/cms-extbase": "^13.4",
+    "typo3/cms-fluid": "^13.4"
   },
   "autoload": {
     "psr-4": {
-      "Maispace\\Resource\\": "Classes/"
+      "Maispace\\MaiResource\\": "Classes/"
     }
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "resource"
+      "extension-key": "mai_resource"
     },
     "branch-alias": {
-      "dev-main": "1.0.x-dev"
+      "dev-main": "13.0.x-dev"
     }
   }
 }

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Maispace\Resource\Controller;
+namespace Maispace\MaiResource\Controller;
 
-use Maispace\Resource\Domain\Model\ResourceCategory;
-use Maispace\Resource\Domain\Repository\ResourceCategoryRepository;
-use Maispace\Resource\Domain\Repository\ResourceRepository;
+use Maispace\MaiResource\Domain\Model\ResourceCategory;
+use Maispace\MaiResource\Domain\Repository\ResourceCategoryRepository;
+use Maispace\MaiResource\Domain\Repository\ResourceRepository;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
