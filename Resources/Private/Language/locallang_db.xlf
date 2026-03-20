@@ -4,53 +4,53 @@
         <header/>
         <body>
             <!-- Models -->
-            <trans-unit id="tx_resource_domain_model_resource">
+            <trans-unit id="tx_mairesource_domain_model_resource">
                 <source>Resource</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resource.title">
+            <trans-unit id="tx_mairesource_domain_model_resource.title">
                 <source>Title</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resource.description">
+            <trans-unit id="tx_mairesource_domain_model_resource.description">
                 <source>Description</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resource.file">
+            <trans-unit id="tx_mairesource_domain_model_resource.file">
                 <source>File</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resource.category">
+            <trans-unit id="tx_mairesource_domain_model_resource.category">
                 <source>Category</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resource.access_group">
+            <trans-unit id="tx_mairesource_domain_model_resource.access_group">
                 <source>Access Group</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resource.access_group.public">
+            <trans-unit id="tx_mairesource_domain_model_resource.access_group.public">
                 <source>Public</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resource.access_group.members">
+            <trans-unit id="tx_mairesource_domain_model_resource.access_group.members">
                 <source>Members only</source>
             </trans-unit>
 
-            <trans-unit id="tx_resource_domain_model_resourcecategory">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory">
                 <source>Resource Category</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resourcecategory.title">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory.title">
                 <source>Title</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resourcecategory.type">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory.type">
                 <source>Type</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resourcecategory.type.download">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory.type.download">
                 <source>Download</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resourcecategory.type.vorlage">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory.type.vorlage">
                 <source>Template (Vorlage)</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resourcecategory.type.formular">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory.type.formular">
                 <source>Form (Formular)</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resourcecategory.type.info">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory.type.info">
                 <source>Info</source>
             </trans-unit>
-            <trans-unit id="tx_resource_domain_model_resourcecategory.description">
+            <trans-unit id="tx_mairesource_domain_model_resourcecategory.description">
                 <source>Description</source>
             </trans-unit>
 

@@ -1,4 +1,4 @@
-CREATE TABLE tx_resource_domain_model_resource (
+CREATE TABLE tx_mairesource_domain_model_resource (
     uid int(11) unsigned NOT NULL AUTO_INCREMENT,
     pid int(11) unsigned DEFAULT '0' NOT NULL,
 
@@ -30,7 +30,7 @@ CREATE TABLE tx_resource_domain_model_resource (
     KEY t3ver_oid (t3ver_oid, t3ver_wsid)
 );
 
-CREATE TABLE tx_resource_domain_model_resourcecategory (
+CREATE TABLE tx_mairesource_domain_model_resourcecategory (
     uid int(11) unsigned NOT NULL AUTO_INCREMENT,
     pid int(11) unsigned DEFAULT '0' NOT NULL,
 

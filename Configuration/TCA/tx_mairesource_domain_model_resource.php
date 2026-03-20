@@ -4,7 +4,7 @@ defined('TYPO3') or exit('Access denied.');
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource',
+        'title' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource',
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -19,7 +19,7 @@ return [
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
-        'iconfile' => 'EXT:resource/Resources/Public/Icons/tx_resource_domain_model_resource.svg',
+        'iconfile' => 'EXT:mai_resource/Resources/Public/Icons/tx_mairesource_domain_model_resource.svg',
         'searchFields' => 'title,description',
         'security' => [
             'ignorePageTypeRestriction' => true,
@@ -67,8 +67,8 @@ return [
                 'items' => [
                     ['label' => '', 'value' => 0],
                 ],
-                'foreign_table' => 'tx_resource_domain_model_resource',
-                'foreign_table_where' => 'AND {#tx_resource_domain_model_resource}.{#pid}=###CURRENT_PID### AND {#tx_resource_domain_model_resource}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_mairesource_domain_model_resource',
+                'foreign_table_where' => 'AND {#tx_mairesource_domain_model_resource}.{#pid}=###CURRENT_PID### AND {#tx_mairesource_domain_model_resource}.{#sys_language_uid} IN (-1,0)',
                 'default' => 0,
             ],
         ],
@@ -145,7 +145,7 @@ return [
         ],
         'title' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource.title',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource.title',
             'config' => [
                 'type' => 'input',
                 'size' => 50,
@@ -156,7 +156,7 @@ return [
         ],
         'description' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource.description',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource.description',
             'config' => [
                 'type' => 'text',
                 'cols' => 60,
@@ -166,7 +166,7 @@ return [
         ],
         'file' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource.file',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource.file',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'file',
                 [
@@ -219,12 +219,12 @@ return [
         ],
         'category' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource.category',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource.category',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'foreign_table' => 'tx_resource_domain_model_resourcecategory',
-                'foreign_table_where' => 'ORDER BY tx_resource_domain_model_resourcecategory.title',
+                'foreign_table' => 'tx_mairesource_domain_model_resourcecategory',
+                'foreign_table_where' => 'ORDER BY tx_mairesource_domain_model_resourcecategory.title',
                 'items' => [
                     ['label' => '', 'value' => 0],
                 ],
@@ -233,17 +233,17 @@ return [
         ],
         'access_group' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource.access_group',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource.access_group',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
                     [
-                        'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource.access_group.public',
+                        'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource.access_group.public',
                         'value' => 0,
                     ],
                     [
-                        'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resource.access_group.members',
+                        'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resource.access_group.members',
                         'value' => 1,
                     ],
                 ],

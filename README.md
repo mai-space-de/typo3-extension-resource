@@ -27,13 +27,13 @@ composer require maispace/resource
 
 1. Install the extension via Composer or the Extension Manager.
 2. Run database compare to create the required tables.
-3. Include the TypoScript setup from `EXT:resource/Configuration/TypoScript/setup.typoscript` or use the provided Site Set `maispace/resource`.
+3. Include the TypoScript setup from `EXT:mai_resource/Configuration/TypoScript/setup.typoscript` or use the provided Site Set `maispace/resource`.
 4. Add the plugins to your page using the TYPO3 backend.
 
 ## Database Tables
 
-- `tx_resource_domain_model_resource` — Resources
-- `tx_resource_domain_model_resourcecategory` — Resource Categories
+- `tx_mairesource_domain_model_resource` — Resources
+- `tx_mairesource_domain_model_resourcecategory` — Resource Categories
 
 ## Access Control
 

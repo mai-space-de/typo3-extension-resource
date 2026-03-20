@@ -4,7 +4,7 @@ defined('TYPO3') or exit('Access denied.');
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory',
+        'title' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory',
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -16,7 +16,7 @@ return [
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
-        'iconfile' => 'EXT:resource/Resources/Public/Icons/tx_resource_domain_model_resourcecategory.svg',
+        'iconfile' => 'EXT:mai_resource/Resources/Public/Icons/tx_mairesource_domain_model_resourcecategory.svg',
         'searchFields' => 'title,description',
         'security' => [
             'ignorePageTypeRestriction' => true,
@@ -59,8 +59,8 @@ return [
                 'items' => [
                     ['label' => '', 'value' => 0],
                 ],
-                'foreign_table' => 'tx_resource_domain_model_resourcecategory',
-                'foreign_table_where' => 'AND {#tx_resource_domain_model_resourcecategory}.{#pid}=###CURRENT_PID### AND {#tx_resource_domain_model_resourcecategory}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_mairesource_domain_model_resourcecategory',
+                'foreign_table_where' => 'AND {#tx_mairesource_domain_model_resourcecategory}.{#pid}=###CURRENT_PID### AND {#tx_mairesource_domain_model_resourcecategory}.{#sys_language_uid} IN (-1,0)',
                 'default' => 0,
             ],
         ],
@@ -85,7 +85,7 @@ return [
         ],
         'title' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory.title',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory.title',
             'config' => [
                 'type' => 'input',
                 'size' => 50,
@@ -96,25 +96,25 @@ return [
         ],
         'type' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory.type',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory.type',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
                     [
-                        'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory.type.download',
+                        'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory.type.download',
                         'value' => 0,
                     ],
                     [
-                        'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory.type.vorlage',
+                        'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory.type.vorlage',
                         'value' => 1,
                     ],
                     [
-                        'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory.type.formular',
+                        'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory.type.formular',
                         'value' => 2,
                     ],
                     [
-                        'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory.type.info',
+                        'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory.type.info',
                         'value' => 3,
                     ],
                 ],
@@ -123,7 +123,7 @@ return [
         ],
         'description' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:resource/Resources/Private/Language/locallang_db.xlf:tx_resource_domain_model_resourcecategory.description',
+            'label' => 'LLL:EXT:mai_resource/Resources/Private/Language/locallang_db.xlf:tx_mairesource_domain_model_resourcecategory.description',
             'config' => [
                 'type' => 'text',
                 'cols' => 60,
