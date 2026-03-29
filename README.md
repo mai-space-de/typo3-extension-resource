@@ -5,7 +5,7 @@
 
 Downloads, templates, forms, and info boxes with FE group-based access control. Manages protected file downloads and informational resources.
 
-**Requires:** TYPO3 13.4 LTS / 14.0 · PHP 8.2+
+**Requires:** TYPO3 13.4 LTS / 14.1 · PHP 8.2+
 
 ---
 
