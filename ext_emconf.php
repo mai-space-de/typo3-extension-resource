@@ -1,29 +1,17 @@
 <?php
-
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Resource',
-    'description' => 'Downloads, Vorlagen, Formulare & Info-Boxen mit Zugriffsschutz per FE-Gruppe.',
-    'version' => '1.0.0',
+    'title' => 'Mai Resource',
+    'description' => 'Downloads, templates, forms, and info boxes with FE group-based access control. Manages protected file downloads and informational resources.',
+    'category' => 'module',
+    'author' => 'Maispace',
+    'author_email' => '',
     'state' => 'stable',
-    'category' => 'plugin',
-    'author' => 'Joel Maximilian Mai',
-    'author_email' => 'joel@maispace.de',
-    'author_company' => 'Maispace',
+    'version' => '1.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.4.0-13.4.99',
-            'extbase' => '',
-            'fluid' => '',
+            'typo3' => '13.4.0-14.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],
-    ],
-    'uploadfolder' => 0,
-    'createDirs' => '',
-    'clearCacheOnLoad' => 1,
-    'autoload' => [
-        'psr-4' => [
-            'Maispace\\MaiResource\\' => 'Classes',
-        ],
     ],
 ];

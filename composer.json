@@ -1,39 +1,76 @@
 {
-  "name": "maispace/mai-resource",
-  "type": "typo3-cms-extension",
-  "description": "Downloads, Vorlagen, Formulare & Info-Boxen mit Zugriffsschutz per FE-Gruppe.",
-  "homepage": "https://www.maispace.de",
-  "license": [
-    "GPL-2.0-or-later"
-  ],
-  "keywords": [
-    "TYPO3 CMS"
-  ],
-  "authors": [
-    {
-      "name": "Joel Maximilian Mai",
-      "email": "joel@maispace.de",
-      "role": "Lead Developer"
-    }
-  ],
-  "version": "1.0.0",
-  "require": {
-    "php": "^8.2",
-    "typo3/cms-core": "^13.4",
-    "typo3/cms-extbase": "^13.4",
-    "typo3/cms-fluid": "^13.4"
-  },
-  "autoload": {
-    "psr-4": {
-      "Maispace\\MaiResource\\": "Classes/"
-    }
-  },
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "mai_resource"
+    "name": "maispace/mai-resource",
+    "description": "Downloads, templates, forms, and info boxes with FE group-based access control. Manages protected file downloads and informational resources.",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Maispace",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "typo3/cms-core": "^13.4 || ^14.0",
+        "typo3/cms-extbase": "^13.4 || ^14.0",
+        "typo3/cms-fluid": "^13.4 || ^14.0"
     },
-    "branch-alias": {
-      "dev-main": "13.0.x-dev"
+    "require-dev": {
+        "armin/editorconfig-cli": "^2.1",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "helmich/typo3-typoscript-lint": "^3.1",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^10.5 || ^11.0",
+        "saschaegerer/phpstan-typo3": "^2.0",
+        "typo3/testing-framework": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Maispace\\MaiResource\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Maispace\\MaiResource\\Tests\\": "Tests"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "mai_resource"
+        },
+        "branch-alias": {
+            "dev-main": "13.0.x-dev"
+        }
+    },
+    "scripts": {
+        "lint:check": [
+            "@check:editorconfig",
+            "@check:phpcs",
+            "@check:phpstan",
+            "@check:typoscript",
+            "@composer validate --strict --no-check-version --no-check-all --no-check-publish"
+        ],
+        "lint:fix": [
+            "@fix:editorconfig",
+            "@fix:phpcs",
+            "@check:phpstan",
+            "@check:typoscript"
+        ],
+        "check:editorconfig": "ec -unv -e vendor/ -e public/",
+        "fix:editorconfig": "ec -unvf -e vendor/ -e public/",
+        "check:phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer check --config .php-cs-fixer.php --ansi --verbose --diff",
+        "fix:phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --config .php-cs-fixer.php --ansi",
+        "check:phpstan": "phpstan analyse --no-progress",
+        "check:phpstan:baseline": "phpstan analyse --no-progress --generate-baseline=phpstan-baseline.neon",
+        "check:typoscript": "typoscript-lint --fail-on-warnings -c typoscript-lint.yml Configuration/",
+        "test": "phpunit --configuration phpunit.xml.dist",
+        "test:unit": "phpunit --configuration phpunit.xml.dist --testsuite Unit"
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true
+        },
+        "sort-packages": true
     }
-  }
 }
