@@ -2,6 +2,11 @@
 
 declare(strict_types=1);
 
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\CategoryConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\FileConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\InputConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\SelectMultipleConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\TextConfig;
 use Maispace\MaiBase\TableConfigurationArray\Helper;
 use Maispace\MaiBase\TableConfigurationArray\Table;
 
@@ -16,41 +21,36 @@ return (new Table($lang('table.tx_mairesource_download')))
     ->addColumn(
         'title',
         $lang('tx_mairesource_download.title'),
-        ['type' => 'input', 'size' => 50, 'max' => 255, 'eval' => 'trim,required']
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim,required')
     )
     ->addColumn(
         'description',
         $lang('tx_mairesource_download.description'),
-        ['type' => 'text', 'rows' => 5, 'cols' => 50, 'eval' => 'trim']
+        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim')
     )
     ->addColumn(
         'file',
         $lang('tx_mairesource_download.file'),
-        [
-            'type' => 'file',
-            'minitems' => 1,
-            'maxitems' => 1,
-            'appearance' => [
+        (new FileConfig())
+            ->setMinItems(1)
+            ->setMaxItems(1)
+            ->setAppearance([
                 'createNewRelationLinkTitle' => $lang('tx_mairesource_download.file.addFile'),
-            ],
-        ]
+            ])
     )
     ->addColumn(
         'fe_groups',
         $lang('tx_mairesource_download.fe_groups'),
-        [
-            'type' => 'select',
-            'renderType' => 'selectMultipleSideBySide',
-            'foreign_table' => 'fe_groups',
-            'foreign_table_where' => 'ORDER BY fe_groups.title',
-            'size' => 5,
-            'minitems' => 0,
-        ]
+        (new SelectMultipleConfig())
+            ->setForeignTable('fe_groups')
+            ->setForeignTableWhere('ORDER BY fe_groups.title')
+            ->setSize(5)
+            ->setMinItems(0)
     )
     ->addColumn(
         'categories',
         $lang('tx_mairesource_download.categories'),
-        ['type' => 'category']
+        new CategoryConfig()
     )
     ->addTypeShowItem(
         '0',

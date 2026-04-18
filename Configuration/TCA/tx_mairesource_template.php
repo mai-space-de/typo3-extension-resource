@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\CategoryConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\FileConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\InputConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\TextConfig;
 use Maispace\MaiBase\TableConfigurationArray\Helper;
 use Maispace\MaiBase\TableConfigurationArray\Table;
 
@@ -16,29 +20,27 @@ return (new Table($lang('table.tx_mairesource_template')))
     ->addColumn(
         'title',
         $lang('tx_mairesource_template.title'),
-        ['type' => 'input', 'size' => 50, 'max' => 255, 'eval' => 'trim,required']
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim,required')
     )
     ->addColumn(
         'description',
         $lang('tx_mairesource_template.description'),
-        ['type' => 'text', 'rows' => 5, 'cols' => 50, 'eval' => 'trim']
+        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim')
     )
     ->addColumn(
         'file',
         $lang('tx_mairesource_template.file'),
-        [
-            'type' => 'file',
-            'minitems' => 1,
-            'maxitems' => 1,
-            'appearance' => [
+        (new FileConfig())
+            ->setMinItems(1)
+            ->setMaxItems(1)
+            ->setAppearance([
                 'createNewRelationLinkTitle' => $lang('tx_mairesource_template.file.addFile'),
-            ],
-        ]
+            ])
     )
     ->addColumn(
         'categories',
         $lang('tx_mairesource_template.categories'),
-        ['type' => 'category']
+        new CategoryConfig()
     )
     ->addTypeShowItem(
         '0',

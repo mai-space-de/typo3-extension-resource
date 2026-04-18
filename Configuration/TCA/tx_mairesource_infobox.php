@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\CategoryConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\FileConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\InputConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\TextConfig;
 use Maispace\MaiBase\TableConfigurationArray\Helper;
 use Maispace\MaiBase\TableConfigurationArray\Table;
 
@@ -16,35 +20,27 @@ return (new Table($lang('table.tx_mairesource_infobox')))
     ->addColumn(
         'title',
         $lang('tx_mairesource_infobox.title'),
-        ['type' => 'input', 'size' => 50, 'max' => 255, 'eval' => 'trim,required']
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim,required')
     )
     ->addColumn(
         'content',
         $lang('tx_mairesource_infobox.content'),
-        [
-            'type' => 'text',
-            'rows' => 15,
-            'cols' => 50,
-            'enableRichtext' => true,
-            'richtextConfiguration' => 'default',
-        ]
+        (new TextConfig())->setRows(15)->setCols(50)->enableRte()->setRichtextConfiguration('default')
     )
     ->addColumn(
         'attachment',
         $lang('tx_mairesource_infobox.attachment'),
-        [
-            'type' => 'file',
-            'maxitems' => 5,
-            'appearance' => [
+        (new FileConfig())
+            ->setMaxItems(5)
+            ->setAppearance([
                 'createNewRelationLinkTitle' => $lang('tx_mairesource_infobox.attachment.addFile'),
                 'enabledControls' => ['info' => true, 'dragdrop' => true, 'sort' => true, 'hide' => true, 'delete' => true],
-            ],
-        ]
+            ])
     )
     ->addColumn(
         'categories',
         $lang('tx_mairesource_infobox.categories'),
-        ['type' => 'category']
+        new CategoryConfig()
     )
     ->addTypeShowItem(
         '0',
