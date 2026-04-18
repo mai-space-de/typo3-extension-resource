@@ -14,13 +14,12 @@ $lang = Helper::localLangHelperFactory('mai_resource', 'Default/locallang_tca.xl
 return (new Table($lang('table.tx_mairesource_infobox')))
     ->setDefaultConfig()
     ->setLabel('title')
-    ->setSearchFields('title, content')
     ->setIconFile('EXT:mai_resource/Resources/Public/Icons/tx_mairesource_infobox.svg')
     ->setSortingField()
     ->addColumn(
         'title',
         $lang('tx_mairesource_infobox.title'),
-        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim,required')
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired()
     )
     ->addColumn(
         'content',
