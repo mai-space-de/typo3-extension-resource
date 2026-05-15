@@ -1,5 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <path fill="currentColor" d="M36 12H18c-1.1 0-2 .9-2 2v36c0 1.1.9 2 2 2h28c1.1 0 2-.9 2-2V24L36 12z"/>
-  <g opacity=".4"><path fill="currentColor" d="M34 16v7.67c0 1.12 1.19 2.33 2.33 2.33H44v-.34L34.34 16H34Z"/></g>
-  <path fill="var(--icon-color-accent, #ff8700)" d="M32 30a6 6 0 0 0-4 10.5V44h8v-3.5A6 6 0 0 0 32 30zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H64V64H0V0Z" fill="#FF8700"/>
 </svg>
