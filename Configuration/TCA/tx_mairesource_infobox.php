@@ -19,12 +19,12 @@ return (new Table($lang('table.tx_mairesource_infobox')))
     ->addColumn(
         'title',
         $lang('tx_mairesource_infobox.title'),
-        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired()
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired(),
     )
     ->addColumn(
         'content',
         $lang('tx_mairesource_infobox.content'),
-        (new TextConfig())->setRows(15)->setCols(50)->enableRte()->setRichtextConfiguration('default')
+        (new TextConfig())->setRows(15)->setCols(50)->enableRte()->setRichtextConfiguration('default'),
     )
     ->addColumn(
         'attachment',
@@ -34,17 +34,17 @@ return (new Table($lang('table.tx_mairesource_infobox')))
             ->setAppearance([
                 'createNewRelationLinkTitle' => $lang('tx_mairesource_infobox.attachment.addFile'),
                 'enabledControls' => ['info' => true, 'dragdrop' => true, 'sort' => true, 'hide' => true, 'delete' => true],
-            ])
+            ]),
     )
     ->addColumn(
         'categories',
         $lang('tx_mairesource_infobox.categories'),
-        new CategoryConfig()
+        new CategoryConfig(),
     )
     ->addTypeShowItem(
         '0',
         'title, content, attachment, categories,
         --div--;' . $lang('tab.language') . ', --palette--;;language,
-        --div--;' . $lang('tab.access') . ', --palette--;;hidden, --palette--;;access'
+        --div--;' . $lang('tab.access') . ', --palette--;;hidden, --palette--;;access',
     )
     ->getConfig();

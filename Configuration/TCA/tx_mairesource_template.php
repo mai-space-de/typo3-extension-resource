@@ -19,12 +19,12 @@ return (new Table($lang('table.tx_mairesource_template')))
     ->addColumn(
         'title',
         $lang('tx_mairesource_template.title'),
-        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired()
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired(),
     )
     ->addColumn(
         'description',
         $lang('tx_mairesource_template.description'),
-        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim')
+        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim'),
     )
     ->addColumn(
         'file',
@@ -34,17 +34,17 @@ return (new Table($lang('table.tx_mairesource_template')))
             ->setMaxItems(1)
             ->setAppearance([
                 'createNewRelationLinkTitle' => $lang('tx_mairesource_template.file.addFile'),
-            ])
+            ]),
     )
     ->addColumn(
         'categories',
         $lang('tx_mairesource_template.categories'),
-        new CategoryConfig()
+        new CategoryConfig(),
     )
     ->addTypeShowItem(
         '0',
         'title, description, file, categories,
         --div--;' . $lang('tab.language') . ', --palette--;;language,
-        --div--;' . $lang('tab.access') . ', --palette--;;hidden, --palette--;;access'
+        --div--;' . $lang('tab.access') . ', --palette--;;hidden, --palette--;;access',
     )
     ->getConfig();

@@ -20,12 +20,12 @@ return (new Table($lang('table.tx_mairesource_download')))
     ->addColumn(
         'title',
         $lang('tx_mairesource_download.title'),
-        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired()
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired(),
     )
     ->addColumn(
         'description',
         $lang('tx_mairesource_download.description'),
-        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim')
+        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim'),
     )
     ->addColumn(
         'file',
@@ -35,7 +35,7 @@ return (new Table($lang('table.tx_mairesource_download')))
             ->setMaxItems(1)
             ->setAppearance([
                 'createNewRelationLinkTitle' => $lang('tx_mairesource_download.file.addFile'),
-            ])
+            ]),
     )
     ->addColumn(
         'fe_groups',
@@ -44,16 +44,16 @@ return (new Table($lang('table.tx_mairesource_download')))
             ->setForeignTable('fe_groups')
             ->setForeignTableWhere('ORDER BY fe_groups.title')
             ->setSize(5)
-            ->setMinItems(0)
+            ->setMinItems(0),
     )
     ->addColumn(
         'categories',
         $lang('tx_mairesource_download.categories'),
-        new CategoryConfig()
+        new CategoryConfig(),
     )
     ->addTypeShowItem(
         '0',
         'title, description, file, categories,
-        --div--;' . $lang('tab.access') . ', fe_groups, --palette--;;hidden, --palette--;;access'
+        --div--;' . $lang('tab.access') . ', fe_groups, --palette--;;hidden, --palette--;;access',
     )
     ->getConfig();
