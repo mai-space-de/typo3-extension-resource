@@ -1,0 +1,16 @@
+plugin.tx_mairesource_list {
+    view {
+        templateRootPaths {
+            0 = EXT:mai_resource/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = EXT:mai_resource/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = EXT:mai_resource/Resources/Private/Layouts/
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_mairesource_list.persistence.storagePid}
+    }
+}

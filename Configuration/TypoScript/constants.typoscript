@@ -1,0 +1,5 @@
+plugin.tx_mairesource_list {
+    persistence {
+        storagePid = 27
+    }
+}

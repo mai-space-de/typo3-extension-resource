@@ -1,0 +1,4 @@
+name: maispace/mai-resource
+label: 'MaiSpace Resource'
+dependencies:
+  - maispace/mai-base

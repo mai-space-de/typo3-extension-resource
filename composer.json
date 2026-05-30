@@ -12,7 +12,9 @@
     "require": {
         "php": "^8.2",
         "maispace/mai-base": "^14.0",
-        "typo3/cms-core": "^14.1"
+        "typo3/cms-core": "^14.1",
+        "typo3/cms-extbase": "^14.1",
+        "typo3/cms-fluid": "^14.1"
     },
     "require-dev": {
         "armin/editorconfig-cli": "^2.1",
@@ -77,5 +79,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../typo3-extension-base"
+        }
+    ]
 }

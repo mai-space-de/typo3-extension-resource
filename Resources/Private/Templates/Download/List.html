@@ -1,0 +1,31 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:if condition="{downloads}">
+    <f:then>
+        <ul class="mai-resource-list" role="list">
+            <f:for each="{downloads}" as="download">
+                <li class="mai-resource-list__item">
+                    <h3 class="mai-resource-list__title">{download.title}</h3>
+                    <f:if condition="{download.description}">
+                        <p class="mai-resource-list__description">{download.description}</p>
+                    </f:if>
+                    <f:if condition="{download.file}">
+                        <a class="mai-resource-list__link" href="{download.file.originalResource.publicUrl}" download>
+                            <f:translate key="download.link" extensionName="mai_resource" />
+                        </a>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:then>
+    <f:else>
+        <p class="mai-resource-list__empty">
+            <f:translate key="download.list.empty" extensionName="mai_resource" />
+        </p>
+    </f:else>
+</f:if>
+
+</html>
