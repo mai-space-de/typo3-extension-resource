@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages"
+          date="2025-01-01T00:00:00Z" product-name="mai_resource">
+        <header/>
+        <body>
+            <trans-unit id="table.tx_mairesource_download">
+                <source>Downloads</source>
+                <target>Downloads</target>
+            </trans-unit>
+            <trans-unit id="table.tx_mairesource_infobox">
+                <source>Infoboxes</source>
+                <target>Infoboxen</target>
+            </trans-unit>
+            <trans-unit id="table.tx_mairesource_template">
+                <source>Templates</source>
+                <target>Vorlagen</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_download.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_download.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_download.file">
+                <source>File</source>
+                <target>Datei</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_download.file.addFile">
+                <source>Add file</source>
+                <target>Datei hinzufügen</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_download.fe_groups">
+                <source>Frontend User Groups</source>
+                <target>Frontend-Benutzergruppen</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_download.categories">
+                <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_infobox.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_infobox.content">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_infobox.attachment">
+                <source>Attachments</source>
+                <target>Anhänge</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_infobox.attachment.addFile">
+                <source>Add attachment</source>
+                <target>Anhang hinzufügen</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_infobox.categories">
+                <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_template.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_template.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_template.file">
+                <source>File</source>
+                <target>Datei</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_template.file.addFile">
+                <source>Add file</source>
+                <target>Datei hinzufügen</target>
+            </trans-unit>
+            <trans-unit id="tx_mairesource_template.categories">
+                <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tab.language">
+                <source>Language</source>
+                <target>Sprache</target>
+            </trans-unit>
+            <trans-unit id="tab.access">
+                <source>Access</source>
+                <target>Zugriff</target>
+            </trans-unit>
+            <trans-unit id="ctype.resource_list">
+                <source>Resources: List</source>
+                <target>Ressourcen: Liste</target>
+            </trans-unit>
+            <trans-unit id="plugin.list.title">
+                <source>Resources: List</source>
+                <target>Ressourcen: Liste</target>
+            </trans-unit>
+            <trans-unit id="flexform.sheet.general">
+                <source>General</source>
+                <target>Allgemein</target>
+            </trans-unit>
+            <trans-unit id="flexform.field.pages">
+                <source>Storage Pages</source>
+                <target>Speicherseiten</target>
+            </trans-unit>
+            <trans-unit id="flexform.field.categoryUids">
+                <source>Categories (Filter)</source>
+                <target>Kategorien (Filter)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
