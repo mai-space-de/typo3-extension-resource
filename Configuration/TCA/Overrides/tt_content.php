@@ -13,7 +13,7 @@ ExtensionUtility::registerPlugin(
     'MaiResource',
     'List',
     $lang('plugin.list.title'),
-    'mai-content',
+    'mai-resource',
     'maispace_plugins_lists',
     '',
     'FILE:EXT:mai_resource/Configuration/FlexForms/ResourceListPlugin.xml',

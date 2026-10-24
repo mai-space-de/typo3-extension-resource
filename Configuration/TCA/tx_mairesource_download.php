@@ -15,7 +15,7 @@ $lang = Helper::localLangHelperFactory('mai_resource', 'Default/locallang_tca.xl
 return (new Table($lang('table.tx_mairesource_download')))
     ->setDefaultConfig()
     ->setLabel('title')
-    ->setIconFile('EXT:mai_base/Resources/Public/Icons/generic_table.svg')
+    ->setIconFile('EXT:mai_base/Resources/Public/Icons/all-icons/interface-download-button-1--arrow-button-down-download-internet-network-server-upload--Streamline-Core.svg')
     ->setSortingField()
     ->addColumn(
         'title',
