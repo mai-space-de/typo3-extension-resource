@@ -7,3 +7,21 @@ services:
   Maispace\MaiResource\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+  dashboard.widget.maiResourceManual:
+    class: 'ProudNerds\PnBackendManual\Widgets\ManualWidget'
+    arguments:
+      $options:
+        file: 'EXT:mai_resource/Resources/Private/Manual/Manual.md'
+        numbered: true
+        contentsDepth: 2
+        printButton: true
+    tags:
+      - name: dashboard.widget
+        identifier: 'maiResourceManual'
+        groupNames: 'documentation'
+        title: 'Handbuch: Ressourcen'
+        description: 'Kurze Anleitung für Downloads, Infoboxen und Vorlagen.'
+        iconIdentifier: 'content-book'
+        height: 'medium'
+        width: 'medium'
